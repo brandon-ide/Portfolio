@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
+
+body {
+    font-family: 'Lexend', sans-serif;
+    background-color: white;
+    color: black;
+    transition: background-color 0.2s, color 0s;
+}
+
+body.dark-mode {
+    background-color: #2b2b2b;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media only screen and (min-width: 320px) {
+
+section {
+    display: grid;
+    margin-top: 2em;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+}
+
+.hiddenRight {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1s; 
+}
+
+@media(prefers-reduced-motion) {
+    .hidden .hiddenRight {
+        transition: none;
+    }
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.projectsContainer {
+    text-align: center;
+    margin: 1em;
+    
+}
+
+.listContainer {
+    display: flex;
+    justify-content: center;
+}
+
+ol {
+    text-align: left;
+}
+
+#darkModeToggle {
+    margin: 1.5em;
+    height: auto;
+    border-radius: 1em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.toggleBorder {
+    content: '';
+    margin: 1em;
+    position: absolute;
+    background-image: conic-gradient(from var(--angle), teal, green, yellow, teal);
+    height: 6.7em;
+    width: 6.7em;
+    border-radius: 1.5em;
+    z-index: -1;
+    filter: blur(.05rem);
+    animation: 3s spin linear infinite;
+}
+
+@keyframes spin {
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+    
+}
+
+#headerContainer {
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgb(28, 28, 28);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover, a:active {
+    color: rgb(0, 145, 213);
+}
+
+.jumpLinks {
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    margin-right: 2em;
+}
+
+.sectionHeader {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#demo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 85%;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    border-radius: .5em;
+    box-shadow: 0 0 10px rgb(28, 28, 28);
+}
+
+#repos {
+    font-size: 1em;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.logo:nth-child(1) {
+    transition-delay: 100ms;
+}
+
+.logo:nth-child(2) {
+    transition-delay: 300ms;
+}
+
+.logo:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.logo:nth-child(4) {
+    transition-delay: 500ms;
+}
+
+.logo:nth-child(5) {
+    transition-delay: 600ms;
+}
+
+.logo:nth-child(6) {
+    transition-delay: 700ms;
+}
+
+.logo:nth-child(7) {
+    transition-delay: 800ms;
+}
+
+.logo:nth-child(8) {
+    transition-delay: 900ms;
+}
+
+.logo:nth-child(9) {
+    transition-delay: 1000ms;
+}
+
+.logo:nth-child(10) {
+    transition-delay: 1100ms;
+}
+
+img {
+    height: 10em;
+    width: 10em;
+    margin: 1em;
+    border-radius: .5em;
+    box-shadow: 0 0 5px 3px rgb(209, 209, 209);
+}
+
+#contact {
+    display: column;
+    justify-content: center;
+}
+
+#email, #linkedin, #github {
+    display: flex;
+    font-size: 1.5em;
+}
+
+#cecepic {
+    height: 11em;
+    border-radius: 1em;
+}
+
+p {
+    text-align: center;
+    margin: 1em;
+}
+
+}
+
+@media only screen and (min-width: 360px) {
+
+a {
+    font-size: 11px;
+}
+
+.toggleBorder {
+    height: 6.5em;
+    width: 6.5em;
+}
+    
+}
+
+@media only screen and (min-width: 390px) {
+
+a {
+    font-size: 12.75px;
+}
+
+.toggleBorder {
+    height: 6.65em;
+    width: 6.65em;
+}
+        
+}
+
+@media only screen and (min-width: 430px) {
+
+a {
+    font-size: 14px;
+}
+
+.toggleBorder {
+    height: 6.8em;
+    width: 6.8em;
+}
+
+}
+
+@media only screen and (min-width: 540px) {
+
+a {
+    font-size: 20px;
+}
+
+.toggleBorder {
+    height: 6.95em;
+    width: 6.95em;
+}
+    
+}
+
+@media only screen and (min-width: 768px) {
+
+a {
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+p, li {
+    font-size: 25px;
+}
+
+#repos {
+    font-size: 1.5em;
+}
+
+.toggleBorder {
+    height: 8.35em;
+    width: 8.35em;
+}
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+a {
+    font-size: 40px;
+}
+
+.toggleBorder {
+    height: 9em;
+    width: 9em;
+}
+    
+}
+
+@media only screen and (min-width: 1280px) {
+
+a {
+    font-size: 40px;
+}
+
+.toggleBorder {
+    height: 9.5em;
+    width: 9.5em;
+}
+    
+}
+  
