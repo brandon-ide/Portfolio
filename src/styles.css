@@ -153,6 +153,7 @@ a:hover, a:active {
 .jumpLinks {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     padding: 2em;
 }
 
