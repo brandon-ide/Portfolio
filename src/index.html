@@ -8,22 +8,20 @@
     <title>Brandon Ide Portfolio</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 <body>
-    <div class="toggleBorder"></div>
-    <div id="headerContainer">
-    <image id="darkModeToggle" src="./assets/me.webp" />
-
-    <div class="jumpLinks">
-        <a href=#projects id="projectsLink">/ Projects</a>
-        <a href=#tech id="techLink">/ Tech Stack</a>
-        <a href=#contact id="contactLink">/ Contact Me</a>
-    </div>
-    </div>
+    <header>
+        <h1 class="intro">Howdy, I'm Brandon. I make 
+            <strong id="targetWord">effective</strong> 
+                websites and applications for good people.
+            </h1>
+            <div class="jumpLinks">
+                <a href=#projects id="projectsLink">Projects</a>
+                <a href=#tech id="techLink">Tech Stack</a>
+                <a href=#contact id="contactLink">Contact Me</a>
+                <button id="darkModeToggle">Dark Mode</button>
+            </div>
+        </header>
 
 <section class="hidden" id="projects">
-    <div class="sectionHeader">
-        <h1>Howdy, I'm Brandon</h1>
-            <p>Here's some of my recent projects</p>
-        </div>
     <div class="projectsContainer">
         <video id="demo" controls muted poster="./assets/TAthumbnail.png">
             <source src="./assets/taskassistvid.mov" type="video/mp4">
@@ -180,6 +178,7 @@
         <image id="cecepic" src="./assets/cece+dad.jpeg" />
     <p>Brandon Devere Ide<br>Software Engineer / Web Developer </p>
     </div>
+<button id="backToTop" onclick="scrollToTop()">Back To Top</button>
 </section> 
 </body>
 </html>

@@ -1,3 +1,14 @@
+const words = ["reliable", "intuitive", "beautiful", "effective"];
+        
+let index = 0;
+
+function rotateWord() {
+    index = (index + 1) % words.length; // Loop back to the start after the last word
+    document.getElementById("targetWord").textContent = words[index];
+}
+
+setInterval(rotateWord, 3000);
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -29,4 +40,17 @@ toggleButton.addEventListener("click", () => {
         localStorage.setItem("darkMode", "disabled");
     }
 });
+
+const button = document.getElementById("backToTop");
+
+    window.onscroll = function() {
+      button.style.display = (window.scrollY > 200) ? "block" : "none";
+    };
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
 
